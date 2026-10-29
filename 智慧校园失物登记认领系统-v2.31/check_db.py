@@ -1,0 +1,12 @@
+import mysql.connector
+conn = mysql.connector.connect(host='127.0.0.1', port=3306, user='root', password='wan1314xy', database='lost_and_found')
+cur = conn.cursor()
+cur.execute("SELECT COUNT(*), status FROM lost_items GROUP BY status")
+print('失物状态分布:', cur.fetchall())
+cur.execute("SELECT COUNT(*), status FROM found_items GROUP BY status")
+print('招领状态分布:', cur.fetchall())
+cur.execute("SELECT category, COUNT(*) FROM lost_items WHERE status='approved' GROUP BY category")
+print('失物分类:', cur.fetchall())
+cur.execute("SELECT category, COUNT(*) FROM found_items WHERE status='approved' GROUP BY category")
+print('招领分类:', cur.fetchall())
+conn.close()

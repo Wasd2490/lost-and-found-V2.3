@@ -1,0 +1,16 @@
+{
+  "name": "智慧校园失物登记认领系统",
+  "short_name": "失物招领",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "description": "智慧校园失物登记认领系统",
+  "icons": [
+    {
+      "src": "/uploads/674e176c73dead12.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
